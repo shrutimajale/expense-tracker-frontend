@@ -1,0 +1,56 @@
+.report-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .report-filters {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .report-filters select,
+  .report-filters button {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .report-filters button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .report-filters button:hover {
+    background-color: #388e3c;
+  }
+  
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .report-table th,
+  .report-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+  }
+  
+  .report-table th {
+    background-color: #f4f6f8;
+    font-weight: 600;
+  }
+  

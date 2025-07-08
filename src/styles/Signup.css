@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-size: cover;
+}
+
+/* Auth page background */
+.auth-page-background {
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Signup container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Signup box styling */
+.signup-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.signup-box input,
+.signup-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #222;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background-color: #45a049;
+}
+
+/* Error and status messages */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -5px;
+}
+
+.success {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.available {
+  color: blue;
+  font-size: 0.9em;
+  margin-top: -5px;
+}
+
+/* Sign in link */
+.signin-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signin-link a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* === DARK MODE === */
+body.dark .signup-box {
+  background-color: rgba(30, 30, 30, 0.98);
+  color: #f0f0f0;
+}
+
+body.dark .signup-box h2 {
+  color: #f0f0f0;
+}
+
+body.dark .signup-box input,
+body.dark .signup-box select {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark .signup-box button {
+  background-color: #388e3c;
+}
+
+body.dark .signup-box button:hover {
+  background-color: #2e7d32;
+}
+
+body.dark .signin-link a {
+  color: #4dabf7;
+}
+
+body.dark .error {
+  color: #ff6b6b;
+}
+
+body.dark .success {
+  color: #81c784;
+}
+
+body.dark .available {
+  color: #4fc3f7;
+}

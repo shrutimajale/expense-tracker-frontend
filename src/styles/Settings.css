@@ -1,0 +1,85 @@
+.settings-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #222;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .setting-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .setting-item input[type="number"],
+  .setting-item select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 60%;
+    background: white;
+    color: #222;
+  }
+  
+  .setting-item.toggle input {
+    transform: scale(1.2);
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* DARK MODE STYLES */
+  body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark .settings-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f0f0f0;
+  }
+  
+  body.dark h2 {
+    color: #eee;
+  }
+  
+  body.dark input,
+  body.dark select,
+  body.dark textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+  }
+  
+  body.dark button {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  body.dark button:hover {
+    background-color: #666;
+  }
+  

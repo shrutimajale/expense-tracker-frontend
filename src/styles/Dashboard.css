@@ -1,0 +1,249 @@
+.dashboard-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9ff;
+  min-height: 100vh;
+  color: #222;
+}
+
+body.dark .dashboard-container {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.income { background-color: #36A2EB; }
+.expense { background-color: #FF6384; }
+.balance { background-color: #4CAF50; }
+
+/* Charts Section */
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.chart {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  color: #222;
+}
+
+body.dark .chart {
+  background: #2c2c2c;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.pie-wrapper {
+  height: 300px;
+}
+
+/* Budget Table */
+.budget-overview {
+  margin: 40px 0;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+body.dark .budget-table {
+  background: #2c2c2c;
+  color: #eee;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+.budget-table th,
+.budget-table td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+body.dark .budget-table th,
+body.dark .budget-table td {
+  border-bottom: 1px solid #444;
+}
+
+.budget-table th {
+  background-color: #f7f9fb;
+  color: #333;
+  font-weight: 600;
+}
+
+body.dark .budget-table th {
+  background-color: #383838;
+  color: #ddd;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+body.dark .progress-bar {
+  background-color: #555;
+}
+
+.fill {
+  height: 100%;
+  transition: width 0.4s ease;
+  background-color: #4CAF50;
+}
+
+/* Status Colors */
+.budget-table tr.over-budget .fill { background-color: #e74c3c; }
+.budget-table tr.near-limit .fill { background-color: #f39c12; }
+.budget-table tr.all-good .fill { background-color: #2ecc71; }
+
+/* Recent Transactions */
+.recent-transactions {
+  margin-top: 40px;
+}
+
+.txn-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+body.dark .txn-table {
+  background: #2c2c2c;
+  color: #eee;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+.txn-table th,
+.txn-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+body.dark .txn-table th,
+body.dark .txn-table td {
+  border-bottom: 1px solid #444;
+}
+
+.txn-table th {
+  background-color: #f7f9fb;
+  font-weight: 600;
+  color: #333;
+}
+
+body.dark .txn-table th {
+  background-color: #383838;
+  color: #ddd;
+}
+
+/* Button */
+.go-transactions-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.go-transactions-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .charts {
+    flex-direction: column;
+  }
+
+  .chart {
+    width: 100%;
+  }
+}
+
+/* Status Badges */
+.status {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.status.ok {
+  color: #2e7d32;
+  background-color: #c8e6c9;
+}
+
+.status.warning {
+  color: #ef6c00;
+  background-color: #ffe0b2;
+}
+
+.status.over {
+  color: #b71c1c;
+  background-color: #ffcdd2;
+}
+
+body.dark .status.ok {
+  background-color: #33691e;
+  color: #a5d6a7;
+}
+
+body.dark .status.warning {
+  background-color: #ff9800;
+  color: #fff3e0;
+}
+
+body.dark .status.over {
+  background-color: #d32f2f;
+  color: #ffcdd2;
+}

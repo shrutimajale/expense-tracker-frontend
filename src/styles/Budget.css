@@ -1,0 +1,187 @@
+/* Root Budget Page */
+.budget-page {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+body.dark .budget-page {
+  background: rgba(40, 40, 40, 0.95);
+  color: #f1f1f1;
+}
+
+/* Budget Form */
+.budget-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+body.dark .budget-form {
+  background-color: #2b2b2b;
+}
+.budget-form h3 {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #333;
+}
+body.dark .budget-form h3 {
+  color: #f9f9f9;
+}
+.budget-form input,
+.budget-form select {
+  flex: 1 1 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background: white;
+  color: #000;
+}
+body.dark .budget-form input,
+body.dark .budget-form select {
+  background: #444;
+  color: #fff;
+  border: 1px solid #777;
+}
+.budget-form input:focus,
+.budget-form select:focus {
+  border-color: #36A2EB;
+  box-shadow: 0 0 6px rgba(54, 162, 235, 0.3);
+}
+.budget-form button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.budget-form button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Budget List Section */
+.budget-list {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+body.dark .budget-list {
+  background: rgba(35, 35, 35, 0.95);
+}
+.budget-list h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+body.dark .budget-list h3 {
+  color: #eee;
+}
+.budget-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.budget-item {
+  background: #fdfdfd;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+body.dark .budget-item {
+  background: #444;
+  color: #ddd;
+}
+.budget-item:hover {
+  background: #f2f9ff;
+}
+body.dark .budget-item:hover {
+  background: #555;
+}
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+.progress-bar {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+.progress-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+.progress-fill.ok {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+.progress-fill.over {
+  background: linear-gradient(90deg, #f44336, #e57373);
+}
+.budget-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+}
+body.dark .budget-footer {
+  color: #aaa;
+}
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+.action-buttons button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 3px;
+  transition: transform 0.2s ease;
+}
+.action-buttons button:hover {
+  transform: scale(1.15);
+}
+.action-buttons button:first-child {
+  color: #1976d2;
+}
+.action-buttons button:last-child {
+  color: #e53935;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .budget-form {
+    flex-direction: column;
+  }
+  .budget-form input,
+  .budget-form button {
+    width: 100%;
+  }
+  .budget-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
